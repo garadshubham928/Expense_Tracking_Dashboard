@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='dashboard.html'">Dashboard</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="income-section">
+            <h2>Add Your Total Income</h2>
+            <form id="income-form">
+                <label for="total-income">Total Income:</label>
+                <input type="number" id="total-income" placeholder="Enter your total income" required>
+                <button type="submit">Save Income</button>
+            </form>
+        </section>
+
+        <section id="expense-form-section">
+            <h2>Add Your Expenses</h2>
+            <form id="expense-form">
+                <label for="expense-text">Expense Description:</label>
+                <input type="text" id="expense-text" placeholder="Enter description" required>
+                <label for="expense-category">Category:</label>
+                <select id="expense-category">
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="expense-amount">Amount:</label>
+                <input type="number" id="expense-amount" placeholder="Enter amount" required>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section id="transaction-list">
+            <h2>Your Expenses</h2>
+            <table id="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction rows go here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
